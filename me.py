@@ -32,8 +32,8 @@ class Me:
         self.old_x = [self.x] + self.old_x
         self.old_y = [self.y] + self.old_y
 
-        del self.old_x[20:]
-        del self.old_y[20:]
+        del self.old_x[256:]
+        del self.old_y[256:]
 
         self.x += self.vx
         self.y += self.vy
