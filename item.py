@@ -11,10 +11,9 @@ class Item:
         if self.alives:
             return
 
-        if random.randrange(10) == 0:
-            self.alives = True
-            self.x = random.randrange(16)
-            self.y = random.randrange(16)
+        self.alives = True
+        self.x = random.randrange(16)
+        self.y = random.randrange(16)
 
 
     def draw(self):

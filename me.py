@@ -12,18 +12,22 @@ class Me:
     old_y = []
 
     def update(self):
-        if pyxel.btnp(pyxel.KEY_LEFT):
-            self.vx = -1
-            self.vy = 0
-        elif pyxel.btnp(pyxel.KEY_RIGHT):
-            self.vx = 1
-            self.vy = 0
-        elif pyxel.btnp(pyxel.KEY_UP):
-            self.vx = 0
-            self.vy = -1
-        elif pyxel.btnp(pyxel.KEY_DOWN):
-            self.vx = 0
-            self.vy = 1
+        if pyxel.btnp(pyxel.KEY_LEFT) or pyxel.btnp(pyxel.KEY_A):
+            if self.vx != 1:
+                self.vx = -1
+                self.vy = 0
+        elif pyxel.btnp(pyxel.KEY_RIGHT) or pyxel.btnp(pyxel.KEY_D):
+            if self.vx != -1:
+                self.vx = 1
+                self.vy = 0
+        elif pyxel.btnp(pyxel.KEY_UP) or pyxel.btnp(pyxel.KEY_W):
+            if self.vy != 1:
+                self.vx = 0
+                self.vy = -1
+        elif pyxel.btnp(pyxel.KEY_DOWN) or pyxel.btnp(pyxel.KEY_S):
+            if self.vy != -1:
+                self.vx = 0
+                self.vy = 1
 
         self.old_x = [self.x] + self.old_x
         self.old_y = [self.y] + self.old_y
